@@ -4,8 +4,8 @@ class Puppy
   
   def initialize(params)
     @name = params [:name]
-    @breed = breed 
-    @months_old = months_old 
+    @breed = params [:breed] 
+    @months_old = params[:months_old]
   end 
   
   
