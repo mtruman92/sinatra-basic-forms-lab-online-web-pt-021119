@@ -10,12 +10,12 @@ class App < Sinatra::Base
     erb :index
   end
 
- post '/' do
-  text_from_user = params[:user_text]
- 
-  @analyzed_text = TextAnalyzer.new(text_from_user)
- 
-  erb :results
-end
+post "/puppy" do
+      @puppy = Puppy.new(params)
+      @name = @puppy.name
+      @breed = @puppy.breed
+      @months_old = @puppy.months_old
+      erb :display_puppy
+    end
 
 end
